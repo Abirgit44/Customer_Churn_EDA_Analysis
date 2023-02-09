@@ -19,6 +19,7 @@ The main insights that I got after exploring the dataset are:-
 >Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. 
 >No Online security, No Tech Support category are high churners.
 >Non-senior Citizens are high churners.
+
 These insights can be used by Scientists to make predictive model out of it.
 
 
