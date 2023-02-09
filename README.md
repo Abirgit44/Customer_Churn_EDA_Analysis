@@ -21,9 +21,3 @@ The main insights that I got after exploring the dataset are:-
 3.No Online security, No Tech Support category are high churners. <br/>
 4.Non-senior Citizens are high churners. <br/>
 
-
-These insights can be used by Scientists to make predictive model out of it.
-
-
-Thanking You
-Abir.
