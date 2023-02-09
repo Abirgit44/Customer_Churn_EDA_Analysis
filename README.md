@@ -14,11 +14,13 @@ View and learn more about My project on:
 https://bit.ly/3xcljEK
 
 The basic goal of this project is to derive at final insights after exploring the dataset.
-The main insights that I got after exploring the dataset are:-
-1.Electronic check medium are the highest churners.
-2.Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. 
-3.No Online security, No Tech Support category are high churners.
-4.Non-senior Citizens are high churners.
+The main insights that I got after exploring the dataset are:
+
+*Electronic check medium are the highest churners.
++Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. 
+-No Online security, No Tech Support category are high churners.
+*Non-senior Citizens are high churners.
+
 
 These insights can be used by Scientists to make predictive model out of it.
 
