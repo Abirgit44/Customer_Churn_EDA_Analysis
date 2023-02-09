@@ -1,6 +1,6 @@
 # Customer_Churn_Analysis
  
- Hi folks, this is a Project on Telecom Customer Churn Dataset Analysis.
+ Hi folks, this is a project on Telecom Customer Churn Dataset Analysis.
  
  In this project I took Telecom Customer Churn dataset from Kaggle and performed Exploratory Data Analysis.
 
