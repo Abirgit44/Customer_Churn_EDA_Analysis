@@ -21,7 +21,10 @@ The main insights that I got after exploring the dataset are:
 -No Online security, No Tech Support category are high churners.
 *Non-senior Citizens are high churners.
 
-
+1.Electronic check medium are the highest churners.
+2.Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers.
+3.No Online security, No Tech Support category are high churners.
+4.Non-senior Citizens are high churners.
 These insights can be used by Scientists to make predictive model out of it.
 
 
