@@ -13,6 +13,12 @@ Skills Applied: Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyt
 View and learn more about My project on:
 https://bit.ly/3xcljEK
 
+The Statistical Learning outcomes I had after Cleaning and Exploring the data are mainly the following:
+>From the dataset we see that total 1869 people are churning overall with respect to 5174 people overall non churners.<br/>
+>The ratio of people churning against not churning is 27:73.<br/>
+>After grouping the data by the user service tenure we can see most people were customers for 1 year i.e. 2175 persons.<br/>
+>Suprisingly they were followed by 5 to 6 years long customers numbered at 1407.<br/>
+
 The basic goal of this project is to derive at final insights after exploring the dataset.
 The main insights that I got after exploring the dataset are:-
 
