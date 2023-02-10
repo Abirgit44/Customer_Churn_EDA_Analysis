@@ -11,7 +11,7 @@ Skills Applied: Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyt
 
 
 View and learn more about My project on:
-https://bit.ly/3xcljEK
+https://bit.ly/3DU5NRz
 
 The Statistical Learning outcomes I had after Cleaning and Exploring the data are mainly the following:
 >From the dataset we see that total 1869 people are churning overall with respect to 5174 people overall non churners.<br/>
@@ -22,8 +22,8 @@ The Statistical Learning outcomes I had after Cleaning and Exploring the data ar
 The basic goal of this project is to derive at final insights after exploring the dataset.
 The main insights that I got after exploring the dataset are:-
 
-1.Electronic check medium are the highest churners. <br/>
-2.Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. <br/>
-3.No Online security, No Tech Support category are high churners. <br/>
-4.Non-senior Citizens are high churners. <br/>
+>1.Electronic check medium are the highest churners. <br/>
+>2.Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. <br/>
+>3.No Online security, No Tech Support category are high churners. <br/>
+>4.Non-senior Citizens are high churners. <br/>
 
