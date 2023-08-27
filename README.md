@@ -5,13 +5,13 @@
  In this project I took Telecom Customer Churn dataset from Kaggle and performed Exploratory Data Analysis.
 
 
-Skills Applied: Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyter Notebook.
+**Skills Applied:** _Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyter Notebook._
 
 ![image](https://user-images.githubusercontent.com/111905512/216779696-2b8101d8-77e6-45f1-9543-153fd00303e3.png)
 
 
 View and learn more about My project on:
-https://bit.ly/3DU5NRz
+**[Project Link](https://bit.ly/3DU5NRz)**
 
 The Statistical Learning outcomes I had after Cleaning and Exploring the data are mainly the following:
 >From the dataset we see that total 1869 people are churning overall with respect to 5174 people overall non churners.<br/>
