@@ -13,7 +13,7 @@ def preprocess_input(data):
                            'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
                            'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod']
     for col in categorical_columns:
-        data[col] = data[col].apply(lambda x: 1 if x == 'Yes' else 0)
+        data[col] = data[col].apply(lambda x: 1 if x == 'Yes' else 0 if x == 'No' else 2)
     return data
 
 # Load your ANN model here
