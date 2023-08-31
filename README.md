@@ -1,29 +1,45 @@
-# Customer_Churn_Analysis
- 
- Hi folks, this is a project on Telecom Customer Churn Dataset Analysis.
- 
- In this project I took Telecom Customer Churn dataset from Kaggle and performed Exploratory Data Analysis.
+# Customer_Churn_Analysis and Prediction
 
+Welcome to my project on Telecom Customer Churn Analysis and Prediction!
 
-**Skills Applied:** _Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyter Notebook._
+In this project, I've taken the Telecom Customer Churn dataset from Kaggle and performed Exploratory Data Analysis (EDA) to gain insights. Additionally, I've built predictive models using TensorFlow, Keras, and Scikit-Learn.
 
-![image](https://user-images.githubusercontent.com/111905512/216779696-2b8101d8-77e6-45f1-9543-153fd00303e3.png)
+## Skills Applied
 
+Data Cleaning, Python, Pandas, NumPy, Seaborn, Matplotlib, Jupyter Notebook, TensorFlow, Keras, Scikit-Learn.
 
-View and learn more about My project on:
-**[Project Link](https://bit.ly/3DU5NRz)**
+![Churn Analysis](https://user-images.githubusercontent.com/111905512/216779696-2b8101d8-77e6-45f1-9543-153fd00303e3.png)
 
-The Statistical Learning outcomes I had after Cleaning and Exploring the data are mainly the following:
->From the dataset we see that total 1869 people are churning overall with respect to 5174 people overall non churners.<br/>
->The ratio of people churning against not churning is 27:73.<br/>
->After grouping the data by the user service tenure we can see most people were customers for 1 year i.e. 2175 persons.<br/>
->Suprisingly they were followed by 5 to 6 years long customers numbered at 1407.<br/>
+## Project Overview
 
-The basic goal of this project is to derive at final insights after exploring the dataset.
-The main insights that I got after exploring the dataset are:-
+Explore and learn more about my project by visiting the [Project Link](https://bit.ly/3DU5NRz).
 
->1.Electronic check medium are the highest churners. <br/>
->2.Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go customers. <br/>
->3.No Online security, No Tech Support category are high churners. <br/>
->4.Non-senior Citizens are high churners. <br/>
+## Churn Analysis Insights
 
+Here are some key insights I gathered after cleaning and exploring the data:
+
+- The dataset shows that a total of 1869 people are churning out of 5174 overall, resulting in a churn rate of approximately 27%.
+- The majority of customers, about 73%, are non-churners.
+- The distribution of customer service tenure reveals that the highest number of customers stayed for 1 year (2175 persons), followed by customers staying for 5 to 6 years (1407 persons).
+
+## Model Building
+
+I've also built predictive models to identify potential churners using the following approaches:
+
+**Artificial Neural Network (ANN) with TensorFlow and Keras**: I used TensorFlow and Keras libraries to construct an ANN model. The model was trained on preprocessed data for churn prediction.
+You can explore the web-based Churn Prediction Model that I've built using Streamlit. Check it out here: [Churn Prediction Web App](https://churnpredictionbyabir.streamlit.app/)
+
+## Main Insights
+
+The primary goal of this project is to derive meaningful insights from the dataset and build predictive models to identify potential churners. Here are some notable findings:
+
+1. Customers using the Electronic check payment medium exhibit the highest churn rate.
+2. Monthly contract customers are more likely to churn due to their lack of contract terms, allowing them to easily switch.
+3. Categories with no Online Security or Tech Support tend to have higher churn rates.
+4. Non-senior citizens are more likely to churn compared to senior citizens.
+
+Feel free to explore the project link for more detailed information, visualizations, and insights from the models.
+
+For any questions or comments, please don't hesitate to reach out.
+
+Thank you!
