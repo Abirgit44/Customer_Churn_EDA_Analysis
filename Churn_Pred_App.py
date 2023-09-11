@@ -1,9 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import load_model
 
 # Function to preprocess user input data
@@ -29,7 +26,6 @@ st.title("Churn Prediction App")
 
 st.write("Enter customer information:")
 
-# Create input fields for user input
 gender = st.selectbox("Gender", ['Male', 'Female'])
 senior_citizen = st.selectbox("Senior Citizen", [0, 1])
 partner = st.selectbox("Partner", ['Yes', 'No'])
@@ -50,7 +46,7 @@ payment_method = st.selectbox("Payment Method", ['Electronic check', 'Mailed che
 monthly_charges = st.number_input("Monthly Charges", min_value=0)
 total_charges = st.number_input("Total Charges", min_value=0)
 
-# Create a dictionary with user input
+# Creating a dictionary with user input
 user_input = {
     'gender': gender,
     'SeniorCitizen': senior_citizen,
