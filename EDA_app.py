@@ -50,6 +50,9 @@ if page in page_content:
 
 # Home Page
 if page == "🏠 Home":
+    st.markdown("""
+        <p style="font-size: 10px;">📱 <strong>Mobile Users:</strong> Click the <strong>top left</strrong> icon to access sidebar for navigating the pages.</p>
+        """,unsafe_allow_html=True)
     st.header("About this Project")
     content="""
     <!DOCTYPE html>
