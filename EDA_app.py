@@ -101,6 +101,7 @@ if page == "🏠 Home":
             </ul>
             <p>Discover valuable insights and make informed decisions to reduce churn rates and improve customer retention.</p>
             <p>Use the navigation menu to explore different sections of the application, including Data, EDA Visualizations, and About Me.</p>
+            <p>Explore the Project's jupyter notebook work: <a href="https://github.com/Abirgit44/Customer_Churn_EDA_Analysis/blob/main/Customer_Churn_EDA.ipynb"><img src="https://img.shields.io/badge/Jupyter-Notebook-blue?logo=jupyter" alt="jupyter notebook"></a></p>
             <p>Project Repository: <a href="https://github.com/Abirgit44/Customer_Churn_EDA_Analysis"><img src="https://img.shields.io/badge/GitHub-Repository-blue?logo=github" alt="GitHub Badge"></a></p>
             <p>Dataset Source: <a href="https://www.kaggle.com/datasets/moe5998/telecom-customer-churn"><img src="https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle" alt="Kaggle Dataset Badge"></a></p>
         </div>
