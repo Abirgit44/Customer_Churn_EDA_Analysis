@@ -33,7 +33,7 @@ st.sidebar.markdown(instructions_html, unsafe_allow_html=True)
 
 # Sidebar with selectbox for page navigation
 page = st.sidebar.selectbox("",
-    ["🏠 Home", "📊 Data", "📈 EDA", "🤖 Try Prediction", "🧑‍💻 About Me"],
+    ["🏠 Home", "📊 Data", "📈 EDA", "🤖 Prediction", "🧑‍💻 About Me"],
     # format_func=lambda x: x.split()[1]  # Remove emojis from display
 )
 
@@ -42,7 +42,7 @@ page_content = {
     "🏠 Home": "Hi, in this page I have given a brief description and outlook of the Project.",
     "📊 Data": "This is the data page where you can see the data that I have used and some basic summary of it.",
     "📈 EDA": "This is the EDA page content where I have performed all the Exploratory Data Visualizations that I could generate to present them sophisticatedly.",
-    "🤖 Try Prediction": "Click this option to try making predictions using the model.",
+    "🤖 Prediction": "In this page you can use the prediction system built by me using Artificial Neural Network concept.",
     "🧑‍💻 About Me": "This is the page where you will find all basic details about the man who created the project i.e. Me."
 }
 
@@ -419,7 +419,7 @@ elif page == "📈 EDA":
     st.plotly_chart(fig4)
 
 #Prediction using ANN page
-elif page == "🤖 Try Prediction":
+elif page == "🤖 Prediction":
     # Function to preprocess user input data
     def preprocess_input(data):
         data['gender'] = data['gender'].apply(lambda x: 1 if x == 'Male' else 0)
@@ -441,7 +441,7 @@ elif page == "🤖 Try Prediction":
     # Set Streamlit to run in wide mode
     st.header("Prediction of Churn using ANN")
 
-    with st.container():
+    with st.sidebar.container():
         st.markdown("<h1 class='section-heading'><span class='emoji'>🧠</span> Why ANN?</h1>", unsafe_allow_html=True)
         st.markdown("Artificial Neural Networks (ANNs) are powerful for classification tasks like churn prediction.")
         st.markdown("ANNs can capture complex patterns and relationships in data, making them suitable for this task.")

@@ -17,9 +17,14 @@ This project allowed me to hone my skills in a variety of areas, including:
 - **Jupyter Notebook**: My interactive environment for data exploration and model development.
 - **Machine Learning**: I employed TensorFlow, Keras, and Scikit-Learn to build predictive models.
 
-## Project Overview
+## **Project Overview and  Explore the app live**:
+
 
 Dive deeper into the project by visiting the [Project Link](https://bit.ly/3DU5NRz). There, you'll find comprehensive details about the dataset, my analysis, and the predictive models I've developed. This project provides valuable insights into the world of customer churn, and I encourage you to explore it in greater depth.
+
+Explore the Streamlit based web application built to show the EDA visualizations and Predictive modeling together from clicking the icon below:
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://telecom-customer-analysis-by-abir.streamlit.app/)
 
 ## Churn Analysis Insights
 
