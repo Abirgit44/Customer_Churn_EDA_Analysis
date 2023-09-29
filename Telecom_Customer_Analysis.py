@@ -2,14 +2,17 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+from tensorflow.keras.models import load_model
 
 # Load the dataset
-url = 'https://raw.githubusercontent.com/Abirgit44/Customer_Churn_EDA_Analysis/main/churn_dataset.csv'
-df = pd.read_csv(url)
+#url = 'https://raw.githubusercontent.com/Abirgit44/Customer_Churn_EDA_Analysis/main/churn_dataset.csv'
+dataset='churn_dataset.csv'
+df = pd.read_csv(dataset)
 
 
-
+st.set_page_config(layout='wide')
 st.title('Customer Churn EDA Dashboard 📊')
+
 
 # Sidebar with selectbox for page navigation
 st.sidebar.markdown("<h1 style='text-align: center; color: violetblue; margin-top: 0; padding-top: 0px;'>🚀 Select a Page 🚀</h1>", unsafe_allow_html=True)
@@ -28,22 +31,26 @@ instructions_html = """
 """
 st.sidebar.markdown(instructions_html, unsafe_allow_html=True)
 
-page = st.sidebar.selectbox(
-    "",
-    ["🏠 Home", "📊 Data", "📈 EDA", "🧑‍💻 About Me"],
-    #format_func=lambda x: x.split()[1]  # Remove emojis from display
+# Sidebar with selectbox for page navigation
+page = st.sidebar.selectbox("",
+    ["🏠 Home", "📊 Data", "📈 EDA", "🤖 Try Prediction", "🧑‍💻 About Me"],
+    # format_func=lambda x: x.split()[1]  # Remove emojis from display
 )
+
 # Define the content for each page
 page_content = {
     "🏠 Home": "Hi, in this page I have given a brief description and outlook of the Project.",
     "📊 Data": "This is the data page where you can see the data that I have used and some basic summary of it.",
     "📈 EDA": "This is the EDA page content where I have performed all the Exploratory Data Visualizations that I could generate to present them sophisticatedly.",
+    "🤖 Try Prediction": "Click this option to try making predictions using the model.",
     "🧑‍💻 About Me": "This is the page where you will find all basic details about the man who created the project i.e. Me."
 }
+
 # Display the content based on the selected page
 if page in page_content:
     st.sidebar.title(f"{page.split()[1]} Page")
     st.sidebar.write(page_content[page])
+
 
 
 
@@ -410,6 +417,94 @@ elif page == "📈 EDA":
                                       'MonthlyCharges': 'Monthly Charges',
                                       'TotalCharges': 'Total Charges'})
     st.plotly_chart(fig4)
+
+#Prediction using ANN page
+elif page == "🤖 Try Prediction":
+    # Function to preprocess user input data
+    def preprocess_input(data):
+        data['gender'] = data['gender'].apply(lambda x: 1 if x == 'Male' else 0)
+        categorical_columns = ['Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService',
+                               'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
+                               'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod']
+        for col in categorical_columns:
+            if col == 'PaymentMethod':
+                payment_methods = data[col].unique()
+                payment_method_mapping = {method: i for i, method in enumerate(payment_methods)}
+                data[col] = data[col].map(payment_method_mapping)
+            else:
+                data[col] = data[col].apply(lambda x: 1 if x == 'Yes' else 0 if x == 'No' else 2)
+        return data
+
+    # Load your ANN model here
+    final_model = load_model('Model_folder/churn_prediction.h5')
+
+    # Set Streamlit to run in wide mode
+    st.header("Prediction of Churn using ANN")
+
+    with st.container():
+        st.markdown("<h1 class='section-heading'><span class='emoji'>🧠</span> Why ANN?</h1>", unsafe_allow_html=True)
+        st.markdown("Artificial Neural Networks (ANNs) are powerful for classification tasks like churn prediction.")
+        st.markdown("ANNs can capture complex patterns and relationships in data, making them suitable for this task.")
+
+    # Streamlit UI
+
+    st.write("Enter customer information:")
+
+    # Create a container for your input fields and output
+    with st.container():
+        gender = st.selectbox("Gender", ['Male', 'Female'])
+        senior_citizen = st.selectbox("Senior Citizen", [0, 1])
+        partner = st.selectbox("Partner", ['Yes', 'No'])
+        dependents = st.selectbox("Dependents", ['Yes', 'No'])
+        tenure = st.number_input("Tenure", min_value=0)
+        phone_service = st.selectbox("Phone Service", ['Yes', 'No'])
+        multiple_lines = st.selectbox("Multiple Lines", ['Yes', 'No'])
+        internet_service = st.selectbox("Internet Service", ['DSL', 'Fiber optic', 'No'])
+        online_security = st.selectbox("Online Security", ['Yes', 'No', 'No internet service'])
+        online_backup = st.selectbox("Online Backup", ['Yes', 'No', 'No internet service'])
+        device_protection = st.selectbox("Device Protection", ['Yes', 'No', 'No internet service'])
+        tech_support = st.selectbox("Tech Support", ['Yes', 'No', 'No internet service'])
+        streaming_tv = st.selectbox("Streaming TV", ['Yes', 'No', 'No internet service'])
+        streaming_movies = st.selectbox("Streaming Movies", ['Yes', 'No', 'No internet service'])
+        contract = st.selectbox("Contract", ['Month-to-month', 'One year', 'Two year'])
+        paperless_billing = st.selectbox("Paperless Billing", ['Yes', 'No'])
+        payment_method = st.selectbox("Payment Method", ['Electronic check', 'Mailed check', 'Bank transfer (automatic)', 'Credit card (automatic)'])
+        monthly_charges = st.number_input("Monthly Charges", min_value=0)
+        total_charges = st.number_input("Total Charges", min_value=0)
+
+        # Create a dictionary with user input
+        user_input = {
+            'gender': gender,
+            'SeniorCitizen': senior_citizen,
+            'Partner': partner,
+            'Dependents': dependents,
+            'tenure': tenure,
+            'PhoneService': phone_service,
+            'MultipleLines': multiple_lines,
+            'InternetService': internet_service,
+            'OnlineSecurity': online_security,
+            'OnlineBackup': online_backup,
+            'DeviceProtection': device_protection,
+            'TechSupport': tech_support,
+            'StreamingTV': streaming_tv,
+            'StreamingMovies': streaming_movies,
+            'Contract': contract,
+            'PaperlessBilling': paperless_billing,
+            'PaymentMethod': payment_method,
+            'MonthlyCharges': monthly_charges,
+            'TotalCharges': total_charges
+        }
+
+        # Preprocess user input
+        input_data = preprocess_input(pd.DataFrame([user_input]))
+        reshaped_input = input_data.values[:, :11]
+
+        # Make prediction
+        prediction = final_model.predict(reshaped_input)
+        single_prediction = prediction[0][0]
+        churn_prediction = ":red[The] :red[customer] :red[is] :red[likely] :red[to] :red[stop] :red[using] :red[service]" if single_prediction > 0.5 else ":green[The] :green[customer] :green[is] :green[likely] :green[to] :green[continue] :green[using] :green[service.]"
+
+        st.write("**Prediction:**", churn_prediction)
 
 # About Me Page
 elif page == "🧑‍💻 About Me":
