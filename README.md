@@ -103,9 +103,8 @@ I've also ventured into predictive modeling to identify potential churners. I've
 
 **Artificial Neural Network (ANN) with TensorFlow and Keras:** I've harnessed the capabilities of TensorFlow and Keras to construct a robust ANN model. This model was trained on preprocessed data to predict customer churn.
 
-Curious about how this model performs in practice? You can explore my web-based **Churn Prediction Model**, developed using Streamlit. Don't miss the opportunity to test its predictive power here:
+Curious about how this model performs in practice? You can explore my web-based **Churn Prediction Model**, developed using Streamlit. Don't miss the opportunity to test its predictive power from the shared app link above.
 
-[Churn Prediction Web App](https://churnpredictionbyabir.streamlit.app/).
 
 ## Main Insights
 
